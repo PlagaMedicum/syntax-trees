@@ -88,7 +88,6 @@ def build_syntax_tree():
     sentences = nltk.sent_tokenize(txt)
     for sent in sentences:
         tsent = pos_tag_sentence(sent)
-        i = 0
         ch = nltk.RegexpParser(grammar)
         tree = ch.parse(tsent)
         tree.draw()
